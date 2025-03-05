@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.trios.csd214test2b_dianat.CrudController">
+    <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+    <TableView fx:id="productTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="nameColumn" text="Name" prefWidth="150"/>
+            <TableColumn fx:id="priceColumn" text="Price" prefWidth="100"/>
+            <TableColumn fx:id="quantityColumn" text="Quantity" prefWidth="100"/>
+        </columns>
+    </TableView>
+    <GridPane hgap="10" vgap="10">
+        <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Label text="Price:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="priceField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Quantity:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="quantityField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </GridPane>
+    <HBox spacing="10">
+        <Button text="Add" onAction="#addProduct"/>
+        <Button text="Update" onAction="#updateProduct"/>
+        <Button text="Delete" onAction="#deleteProduct"/>
+    </HBox>
+</VBox>
+
+
+
+
